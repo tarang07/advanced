@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Q3 Assisgnment
+	</title>
+</head>
+<body>
+<form>
+	Name  :  <input type="text" name="fname" id="fname" onblur="(function() {
+		var p = document.getElementById('fname');
+		if(!p.value) {
+			alert('Pls enter Name');
+			p.focus();
+		}
+		})();"><br><br>
+	Phone  :  <input type="text" name="fphone" id="fphone" onblur="(function() {
+		var p = document.getElementById('fphone');
+		if(!p.value) {
+			alert('Pls enter Phone No');
+			p.focus();
+		}
+		})();"><br><br>
+	Email Id : <input type="text" name="email" id="email" onblur="(function() {
+		var x = document.getElementById('email').value;
+		var regpat = /^[a-zA-Z_\.\-]+@[a-zA-Z_\-\.]+?\.[a-zA-Z]{2,4}$/;
+		var result = regpat.test(x);
+		if(!result) {
+			alert('Enter Valid Id');
+
+		}else{
+			alert('Valid Email Congrts !!');
+		}
+	})();"><br><br>
+	<button type="submit" value="Submit">Submit</button>
+	<textarea rows="4" cols="50" placeholder="Please enter Address"></textarea>
+</form>
+</body>
+</html>
