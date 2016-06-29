@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Advanced JavaScript Assignment Q5
+	</title>
+</head>
+<script type="text/javascript">
+function run() {
+	function outer(x) { // outer func 
+		return function (y) { //inner funv
+			return x*y; // return multiplication
+		};
+	}
+
+	var multiplication = outer(15); //calling of closure function
+	alert("Result of 15 * 4  = " + multiplication(4));
+}
+</script>
+<body>
+
+<p>
+	Here Closure is implemented !! Please Click Submit for result !!
+</p>
+<button type="button" onclick="run()">Click Me !!</button>
+</body>
+</html>
